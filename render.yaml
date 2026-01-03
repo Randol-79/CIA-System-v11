@@ -77,7 +77,7 @@ services:
       - key: SLACK_BOT_TOKEN
         sync: false
       - key: ACCELO_CLIENT_ID
-        sync: falseerr
+        sync: false
       - key: GOOGLE_CLIENT_ID
         sync: false
       - key: FIREFLIES_API_KEY
@@ -94,7 +94,8 @@ databases:
     plan: free
     region: oregon
     postgresMajorVersion: 14
-    ipAllowList: ["0.0.0.0/0"]
+    ipAllowList:
+      - "0.0.0.0/0"
 
   # Redis Cache
   - name: cia-redis
